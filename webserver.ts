@@ -24,7 +24,6 @@ function handleRequest(request: Request): Response {
    responseHeaders.set('content-type', 'application/json; charset=UTF-8');
 
    const origin = request.headers.get('origin');
-   console.log('request header origin is', origin)
    if (origin) {
       responseHeaders.set('Access-Control-Allow-Origin', origin);
    }
