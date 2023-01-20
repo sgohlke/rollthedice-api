@@ -1,9 +1,6 @@
 import { serve } from './deps.ts';
 
 const port = 3018;
-const jsonContentTypeHeader = {
-   'content-type': 'application/json; charset=UTF-8',
-};
 
 function generateRandomNumber() {
    const randomNumber = Math.random() * 6;
@@ -46,13 +43,13 @@ function handleRequest(request: Request): Response {
                   JSON.stringify({
                      numbers: generateRandomNumbers(numberOfRandomNumbers),
                   }),
-                  { headers: jsonContentTypeHeader },
+                  { headers: responseHeaders },
                );
             }
          }
       }
       return new Response(JSON.stringify({ message: 'Hello stackstream!' }), {
-         headers: jsonContentTypeHeader,
+         headers: responseHeaders,
       });
    }
 }
