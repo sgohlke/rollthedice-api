@@ -57,8 +57,3 @@ function handleRequest(request: Request): Response {
 }
 
 serve(handleRequest, { port: port });
-,)
-    }
-}
-
-serve(handleRequest, { port: port });
