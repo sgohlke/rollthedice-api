@@ -48,8 +48,7 @@ function handleRequest(request: Request): Response {
          }
       }
       return returnDataResponse({
-         message:
-            'Welcome to Rollthedice API!',
+         message: 'Welcome to Rollthedice API!',
       }, responseHeaders)
    }
 }
